@@ -1,7 +1,12 @@
 import axios from 'axios';
 
-// Use environment variable or fallback to your deployed backend
-const API_URL = import.meta.env.VITE_API_URL || 'https://blog-assignment-server-YOUR-HASH.onrender.com/api';
+// Temporarily hardcode the API URL for testing
+const API_URL = 'https://blog-assignment-server.onrender.com/api';
+
+// Debug: Log the API URL being used
+console.log('🔗 API_URL being used:', API_URL);
+console.log('🔗 VITE_API_URL env var:', import.meta.env.VITE_API_URL);
+console.log('🔗 All env vars:', import.meta.env);
 
 const api = axios.create({
   baseURL: API_URL,
